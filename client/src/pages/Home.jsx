@@ -8,11 +8,11 @@ import Loader from '../components/Loader';
 
 const Home = () => {
     const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(getProducts());
-    }, []);
     const { productsList, status } = useSelector((state) => state.products);
     console.log(productsList);
+    useEffect(() => {
+        productsList[0] && dispatch(getProducts());
+    }, [productsList]);
 
     if (status === statusCode.LOADING) {
         return <Loader />;
