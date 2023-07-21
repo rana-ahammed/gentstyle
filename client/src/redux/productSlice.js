@@ -3,7 +3,7 @@ import axios from 'axios';
 import statusCode from '../utils/StatusCode';
 
 const initialState = {
-    productsList: [] || JSON.parse(localStorage.getItem('productsList')),
+    productsList: JSON.parse(localStorage.getItem('productsList')) || [],
     status: statusCode.IDLE
 };
 
@@ -19,7 +19,7 @@ const productSlice = createSlice({
             state.status = statusCode.IDLE;
             console.log(action.payload);
             const products = localStorage.setItem('productsList', JSON.stringify(action.payload));
-            state.productsList = products;
+            state.productsList.push(products);
         });
         builder.addCase(getProducts.rejected, (state) => {
             state.status = statusCode.ERROR;
