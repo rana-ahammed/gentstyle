@@ -17,9 +17,10 @@ const productSlice = createSlice({
         });
         builder.addCase(getProducts.fulfilled, (state, action) => {
             state.status = statusCode.IDLE;
+            console.log(action.payload);
             state.productsList = localStorage.setItem(
                 'productsList',
-                JSON.stringify(...action.payload)
+                JSON.stringify(action.payload)
             );
         });
         builder.addCase(getProducts.rejected, (state) => {
