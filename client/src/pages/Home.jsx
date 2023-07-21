@@ -11,7 +11,7 @@ const Home = () => {
     const { productsList, status } = useSelector((state) => state.products);
     console.log(productsList);
     useEffect(() => {
-        productsList[0] && dispatch(getProducts());
+        productsList === [] && dispatch(getProducts());
     }, [productsList]);
 
     if (status === statusCode.LOADING) {
