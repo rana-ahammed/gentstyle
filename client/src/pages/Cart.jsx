@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 const Cart = () => {
     const navigate = useNavigate();
     const { cartProducts } = useSelector((state) => state.cart);
+    console.log(cartProducts);
     const { user } = useSelector((state) => state.user);
 
     const totalQuantity = cartProducts.reduce((acc, curr) => acc + parseInt(curr.quantity), 0);
