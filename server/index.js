@@ -7,6 +7,8 @@ import cookieSession from 'cookie-session';
 import connectDatabase from './database/db.js';
 import passport from './middlewares/passportMiddleware.js';
 
+connectDatabase();
+
 dotenv.config();
 const app = express();
 app.use(cookieParser());
@@ -37,8 +39,6 @@ app.use('/', userRoute);
 app.use('/', productRoute);
 app.use('/auth', passportRoute);
 app.use('/', paymentRoute);
-
-connectDatabase();
 
 app.get('/', (req, res) => {
     res.send('Server is working');
