@@ -24,6 +24,7 @@ const cartSlice = createSlice({
                 cartProducts.push(product);
             }
             localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+            state.cartProducts = JSON.parse(localStorage.getItem('cartProducts'));
         },
         removeFromCart(state, action) {
             const deletedProductIndex = state.cartProducts.findIndex(
