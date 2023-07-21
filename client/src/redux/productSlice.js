@@ -19,7 +19,7 @@ const productSlice = createSlice({
             state.status = statusCode.IDLE;
             state.productsList = localStorage.setItem(
                 'productsList',
-                JSON.stringify(action.payload)
+                JSON.stringify(...action.payload)
             );
         });
         builder.addCase(getProducts.rejected, (state) => {
