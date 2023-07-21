@@ -18,10 +18,8 @@ const productSlice = createSlice({
         builder.addCase(getProducts.fulfilled, (state, action) => {
             state.status = statusCode.IDLE;
             console.log(action.payload);
-            state.productsList = localStorage.setItem(
-                'productsList',
-                JSON.stringify(action.payload)
-            );
+            const products = localStorage.setItem('productsList', JSON.stringify(action.payload));
+            state.productsList = products;
         });
         builder.addCase(getProducts.rejected, (state) => {
             state.status = statusCode.ERROR;
