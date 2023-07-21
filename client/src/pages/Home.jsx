@@ -26,8 +26,11 @@ const Home = () => {
             <Slider />
             <p className="my-10 text-center text-2xl underline">Our Popular Products</p>
             <div className="flex flex-wrap items-center justify-center gap-6 p-2 md:p-4">
-                {productsList[0] &&
-                    productsList.map((product) => <HomeCard product={product} key={product._id} />)}
+                {productsList[0] ? (
+                    productsList.map((product) => <HomeCard product={product} key={product._id} />)
+                ) : (
+                    <p>No Products are available</p>
+                )}
             </div>
         </>
     );
