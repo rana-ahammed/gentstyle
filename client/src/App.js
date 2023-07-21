@@ -14,6 +14,10 @@ function App() {
     const [loggedIn, setLoggedIn] = useState(null);
 
     useEffect(() => {
+        dispatch(getProducts());
+    }, []);
+
+    useEffect(() => {
         const loggedUser = localStorage.getItem('user');
         setLoggedIn(Boolean(loggedUser));
     }, []);
@@ -42,10 +46,6 @@ function App() {
 
     useEffect(() => {
         getUser();
-    }, []);
-
-    useEffect(() => {
-        dispatch(getProducts());
     }, []);
 
     return (
