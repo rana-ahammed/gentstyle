@@ -3,7 +3,7 @@ import axios from 'axios';
 import statusCode from '../utils/StatusCode';
 
 const initialState = {
-    productsList: JSON.parse(localStorage.getItem('productsList')) || [],
+    productsList: [] || JSON.parse(localStorage.getItem('productsList')),
     status: statusCode.IDLE
 };
 
