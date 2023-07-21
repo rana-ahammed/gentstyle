@@ -12,7 +12,7 @@ const Home = () => {
     console.log(productsList);
     useEffect(() => {
         dispatch(getProducts());
-    }, [productsList.length]);
+    }, [productsList]);
 
     if (status === statusCode.LOADING) {
         return <Loader />;
