@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { loginredux } from './redux/userSlice';
 import Footer from './components/Footer';
+import { getProducts } from './redux/productSlice';
 
 function App() {
     const dispatch = useDispatch();
@@ -41,6 +42,10 @@ function App() {
 
     useEffect(() => {
         getUser();
+    }, []);
+
+    useEffect(() => {
+        dispatch(getProducts());
     }, []);
 
     return (

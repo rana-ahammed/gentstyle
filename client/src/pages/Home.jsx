@@ -1,18 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Slider from '../components/Slider';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import HomeCard from '../components/HomeCard';
-import { getProducts } from '../redux/productSlice';
 import statusCode from '../utils/StatusCode';
 import Loader from '../components/Loader';
 
 const Home = () => {
-    const dispatch = useDispatch();
     const { productsList, status } = useSelector((state) => state.products);
     console.log(productsList);
-    useEffect(() => {
-        dispatch(getProducts());
-    }, []);
 
     if (status === statusCode.LOADING) {
         return <Loader />;
