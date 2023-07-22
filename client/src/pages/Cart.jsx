@@ -11,11 +11,9 @@ const Cart = () => {
     console.log(cartProducts);
     const { user } = useSelector((state) => state.user);
 
-    const totalQuantity =
-        cartProducts[0] && cartProducts.reduce((acc, curr) => acc + parseInt(curr.quantity), 0);
+    const totalQuantity = cartProducts.reduce((acc, curr) => acc + parseInt(curr.quantity), 0);
 
-    const totalPrice =
-        cartProducts[0] && cartProducts.reduce((acc, curr) => acc + parseInt(curr.total), 0);
+    const totalPrice = cartProducts.reduce((acc, curr) => acc + parseInt(curr.total), 0);
 
     const handlePayment = async () => {
         const data = {
