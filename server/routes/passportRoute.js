@@ -31,8 +31,7 @@ router.get(
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             httpOnly: true,
             secure: true,
-            sameSite: 'none',
-            domain: `${process.env.CLIENT_DOMAIN}`
+            sameSite: 'none'
         };
         res.cookie('jwtToken', token, options);
         res.redirect(process.env.CLIENT_URL);
@@ -51,8 +50,7 @@ router.get(
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             httpOnly: true,
             secure: true,
-            sameSite: 'none',
-            domain: `${process.env.CLIENT_DOMAIN}`
+            sameSite: 'none'
         };
         res.cookie('jwtToken', token, options);
         res.redirect(process.env.CLIENT_URL);
@@ -71,8 +69,7 @@ router.get(
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             httpOnly: true,
             secure: true,
-            sameSite: 'none',
-            domain: `${process.env.CLIENT_DOMAIN}`
+            sameSite: 'none'
         };
         res.cookie('jwtToken', token, options);
         res.redirect(process.env.CLIENT_URL);
