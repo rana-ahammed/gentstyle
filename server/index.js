@@ -14,8 +14,7 @@ const app = express();
 app.use(cookieParser());
 const corsConfig = {
     credentials: true,
-    origin: `${process.env.CLIENT_URL}`,
-    allowedHeaders: ['Content-Type', 'Authorization']
+    origin: `${process.env.CLIENT_URL}`
 };
 app.use(cors(corsConfig));
 app.use(
