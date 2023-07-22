@@ -29,6 +29,7 @@ router.get(
         const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET);
         const options = {
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+            sameSite: 'lax',
             httpOnly: true,
             secure: true
         };
@@ -47,6 +48,7 @@ router.get(
         const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET);
         const options = {
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+            sameSite: 'lax',
             httpOnly: true,
             secure: true
         };
@@ -65,6 +67,7 @@ router.get(
         const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET);
         const options = {
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+            sameSite: 'lax',
             httpOnly: true,
             secure: true
         };
