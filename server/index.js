@@ -1,5 +1,5 @@
 import express from 'express';
-// import cors from 'cors';
+import cors from 'cors';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
@@ -12,11 +12,11 @@ connectDatabase();
 dotenv.config();
 const app = express();
 app.use(cookieParser());
-// const corsConfig = {
-//     credentials: true,
-//     origin: `${process.env.CLIENT_URL}`
-// };
-// app.use(cors(corsConfig));
+const corsConfig = {
+    credentials: true,
+    origin: `${process.env.CLIENT_URL}`
+};
+app.use(cors(corsConfig));
 app.use(
     cookieSession({
         name: 'session',
