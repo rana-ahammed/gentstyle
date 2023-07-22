@@ -31,7 +31,8 @@ router.get(
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             sameSite: 'none',
             httpOnly: true,
-            secure: true
+            secure: true,
+            domain: `${process.env.CLIENT_URL}`
         };
         res.cookie('jwtToken', token, options);
         res.redirect(process.env.CLIENT_URL);
@@ -50,7 +51,8 @@ router.get(
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             sameSite: 'none',
             httpOnly: true,
-            secure: true
+            secure: true,
+            domain: `${process.env.CLIENT_URL}`
         };
         res.cookie('jwtToken', token, options);
         res.redirect(process.env.CLIENT_URL);
@@ -69,7 +71,8 @@ router.get(
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             sameSite: 'none',
             httpOnly: true,
-            secure: true
+            secure: true,
+            domain: `${process.env.CLIENT_URL}`
         };
         res.cookie('jwtToken', token, options);
         res.redirect(process.env.CLIENT_URL);
@@ -84,7 +87,8 @@ router.get('/logout', (req, res, next) => {
     res.cookie('jwtToken', null, {
         expires: new Date(Date.now()),
         httpOnly: true,
-        secure: true
+        secure: true,
+        domain: `${process.env.CLIENT_URL}`
     });
 
     res.redirect(process.env.CLIENT_URL);
