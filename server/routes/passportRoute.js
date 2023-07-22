@@ -29,7 +29,7 @@ router.get(
         const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET);
         const options = {
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
-            httpOnly: false,
+            httpOnly: true,
             secure: true
         };
         res.cookie('jwtToken', token, options);
@@ -47,7 +47,7 @@ router.get(
         const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET);
         const options = {
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
-            httpOnly: false,
+            httpOnly: true,
             secure: true
         };
         res.cookie('jwtToken', token, options);
@@ -65,7 +65,7 @@ router.get(
         const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET);
         const options = {
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
-            httpOnly: false,
+            httpOnly: true,
             secure: true
         };
         res.cookie('jwtToken', token, options);
@@ -81,7 +81,7 @@ router.get('/logout', (req, res, next) => {
     res.cookie('jwtToken', null, {
         expires: new Date(Date.now()),
         httpOnly: true,
-        secure: false
+        secure: true
     });
 
     res.redirect(process.env.CLIENT_URL);
