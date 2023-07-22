@@ -25,7 +25,7 @@ app.use(
         maxAge: 24 * 60 * 60 * 1000,
         httpOnly: true,
         secure: true,
-        domain: `${process.env.CLIENT_URL}`
+        domain: `${process.env.CLIENT_DOMAIN}`
     })
 );
 app.use(express.json({ limit: '50mb' }));
