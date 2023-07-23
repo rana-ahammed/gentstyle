@@ -9,9 +9,16 @@ import Loader from '../components/Loader';
 const Home = () => {
     const dispatch = useDispatch();
     const { productsList, status } = useSelector((state) => state.products);
-    console.log(productsList);
     useEffect(() => {
-        if (!productsList[0]) return dispatch(getProducts());
+        if (!productsList[0]) {
+            dispatch(getProducts());
+            return (window.onload = function () {
+                if (!window.location.hash) {
+                    window.location = window.location + '#loaded';
+                    window.location.reload();
+                }
+            });
+        }
     }, []);
 
     if (status === statusCode.LOADING) {
