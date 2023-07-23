@@ -45,6 +45,7 @@ const Login = () => {
         setIsLoading(true);
         const config = {
             withCredentials: true,
+            crossDomain: true,
             headers: { 'Content-Type': 'application/json' }
         };
         await axios
