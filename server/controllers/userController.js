@@ -108,6 +108,9 @@ export const login = async (req, res) => {
         const jwtToken = jwt.sign({ _id: user._id.toString() }, process.env.JWT_SECRET);
         const options = {
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+            httpOnly: true,
+            path: '/',
+            domain: '.vercel.app',
             sameSite: 'none',
             secure: true
         };
