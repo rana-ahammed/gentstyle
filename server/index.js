@@ -14,7 +14,7 @@ const app = express();
 app.use(cookieParser());
 const corsConfig = {
     credentials: true,
-    origin: true
+    origin: `${process.env.CLIENT_URL}`
 };
 app.use(cors(corsConfig));
 app.use(
@@ -24,6 +24,7 @@ app.use(
         maxAge: 24 * 60 * 60 * 1000,
         httpOnly: true,
         secure: true,
+        path: '/',
         sameSite: 'none',
         domain: `${process.env.CLIENT_DOMAIN}`
     })
