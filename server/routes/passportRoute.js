@@ -48,7 +48,6 @@ router.get(
         const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET);
         const options = {
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
-            httpOnly: true,
             secure: true,
             sameSite: 'none'
         };
@@ -67,7 +66,6 @@ router.get(
         const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET);
         const options = {
             expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
-            httpOnly: true,
             secure: true,
             sameSite: 'none'
         };
@@ -83,7 +81,6 @@ router.get('/logout', (req, res, next) => {
     req.session = null;
     res.cookie('jwtToken', null, {
         expires: new Date(Date.now()),
-        httpOnly: true,
         secure: true
     });
 

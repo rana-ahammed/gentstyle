@@ -23,7 +23,6 @@ app.use(
         keys: [process.env.SESSION_SECRET],
         cookie: {
             maxAge: 24 * 60 * 60 * 1000,
-            httpOnly: true,
             secure: true,
             path: '/',
             domain: 'process.env.CLIENT_DOMAIN',
