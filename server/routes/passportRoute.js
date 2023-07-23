@@ -31,7 +31,6 @@ router.get(
             maxAge: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             secure: true,
             sameSite: 'none',
-            domain: 'rana-shop.vercel.app',
             path: '/'
         };
         res.cookie('jwtToken', token, options);
@@ -51,7 +50,6 @@ router.get(
             maxAge: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             secure: true,
             sameSite: 'none',
-            domain: 'rana-shop.vercel.app',
             path: '/'
         };
         res.cookie('jwtToken', token, options);
@@ -71,7 +69,6 @@ router.get(
             maxAge: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             secure: true,
             sameSite: 'none',
-            domain: 'rana-shop.vercel.app',
             path: '/'
         };
         res.cookie('jwtToken', token, options);

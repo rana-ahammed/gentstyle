@@ -25,7 +25,6 @@ app.use(
             maxAge: 24 * 60 * 60 * 1000,
             secure: true,
             path: '/',
-            domain: 'rana-shop.vercel.app',
             sameSite: 'none'
         }
     })
