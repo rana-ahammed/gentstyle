@@ -28,9 +28,11 @@ router.get(
     (req, res) => {
         const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET);
         const options = {
-            expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+            maxAge: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             secure: true,
-            sameSite: 'none'
+            sameSite: 'none',
+            domain: 'rana-shop.vercel.app',
+            path: '/'
         };
         res.cookie('jwtToken', token, options);
         res.redirect(process.env.CLIENT_URL);
@@ -46,9 +48,11 @@ router.get(
     (req, res) => {
         const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET);
         const options = {
-            expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+            maxAge: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             secure: true,
-            sameSite: 'none'
+            sameSite: 'none',
+            domain: 'rana-shop.vercel.app',
+            path: '/'
         };
         res.cookie('jwtToken', token, options);
         res.redirect(process.env.CLIENT_URL);
@@ -64,9 +68,11 @@ router.get(
     (req, res) => {
         const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET);
         const options = {
-            expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+            maxAge: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
             secure: true,
-            sameSite: 'none'
+            sameSite: 'none',
+            domain: 'rana-shop.vercel.app',
+            path: '/'
         };
         res.cookie('jwtToken', token, options);
         res.redirect(process.env.CLIENT_URL);
@@ -79,8 +85,7 @@ router.get('/logout', (req, res, next) => {
     });
     req.session = null;
     res.cookie('jwtToken', null, {
-        expires: new Date(Date.now()),
-        secure: true
+        maxAge: new Date(Date.now())
     });
 
     res.redirect(process.env.CLIENT_URL);
