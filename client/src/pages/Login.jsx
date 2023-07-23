@@ -51,7 +51,7 @@ const Login = () => {
         await axios
             .post(`${process.env.REACT_APP_SERVER_URL}/login`, { email, password }, config)
             .then((res) => {
-                console.log(res.data.user);
+                console.log(res.data);
                 if (!res.data.user.verified) {
                     setMessage(res.data.message);
                     return toast.success(res.data.message);
