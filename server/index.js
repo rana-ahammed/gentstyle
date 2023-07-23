@@ -25,8 +25,7 @@ app.use(
         httpOnly: true,
         secure: true,
         path: '/',
-        sameSite: 'none',
-        domain: `${process.env.CLIENT_DOMAIN}`
+        sameSite: 'none'
     })
 );
 app.use(express.json({ limit: '50mb' }));
