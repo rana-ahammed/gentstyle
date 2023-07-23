@@ -21,12 +21,14 @@ app.use(
     cookieSession({
         name: 'session',
         keys: [process.env.SESSION_SECRET],
-        maxAge: 24 * 60 * 60 * 1000,
-        httpOnly: true,
-        secure: true,
-        path: '/',
-        domain: 'process.env.CLIENT_DOMAIN',
-        sameSite: 'none'
+        cookie: {
+            maxAge: 24 * 60 * 60 * 1000,
+            httpOnly: true,
+            secure: true,
+            path: '/',
+            domain: 'process.env.CLIENT_DOMAIN',
+            sameSite: 'none'
+        }
     })
 );
 app.use(express.json({ limit: '50mb' }));
