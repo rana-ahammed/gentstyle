@@ -6,19 +6,19 @@
             "src": "clothes.png",
             "sizes": "64x64 32x32 24x24 16x16",
             "type": "image/png",
-            "purpose": "maskable"
+            "purpose": "any"
         },
         {
             "src": "clothes.png",
             "type": "image/png",
             "sizes": "192x192",
-            "purpose": "maskable"
+            "purpose": "any"
         },
         {
             "src": "clothes.png",
             "type": "image/png",
             "sizes": "512x512",
-            "purpose": "maskable"
+            "purpose": "any"
         }
     ],
     "start_url": ".",
