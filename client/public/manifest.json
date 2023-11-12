@@ -1,25 +1,29 @@
 {
-  "short_name": "RanaShop",
-  "name": "RanaShop",
-  "icons": [
-    {
-      "src": "clothes.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "clothes.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "clothes.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+    "short_name": "RanaShop",
+    "name": "RanaShop",
+    "icons": [
+        {
+            "src": "clothes.png",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "clothes.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "clothes.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "prefer_related_applications": true
 }

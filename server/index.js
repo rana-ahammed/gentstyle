@@ -5,7 +5,6 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import cookieSession from 'cookie-session';
 import connectDatabase from './database/db.js';
-import passport from './middlewares/passportMiddleware.js';
 
 connectDatabase();
 
@@ -32,17 +31,13 @@ app.use(
 app.use(express.json({ limit: '50mb' }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(passport.initialize());
-app.use(passport.session());
 
 import userRoute from './routes/userRoute.js';
 import productRoute from './routes/productRoute.js';
-import passportRoute from './routes/passportRoute.js';
 import paymentRoute from './routes/paymentRoute.js';
 
 app.use('/', userRoute);
 app.use('/', productRoute);
-app.use('/auth', passportRoute);
 app.use('/', paymentRoute);
 
 app.get('/', (req, res) => {
