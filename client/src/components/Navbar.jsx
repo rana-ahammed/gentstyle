@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BsFillCartFill } from 'react-icons/bs';
 import { HiOutlineUserCircle } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutredux } from '../redux/userSlice';
 import axios from 'axios';
@@ -9,6 +9,7 @@ import { toast } from 'react-hot-toast';
 
 const Navbar = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const { user } = useSelector((state) => state.user);
     const { cartProducts } = useSelector((state) => state.cart);
     const [showMenu, setShowMenu] = useState(false);
@@ -29,9 +30,11 @@ const Navbar = () => {
         };
         await axios
             .get(`${process.env.REACT_APP_SERVER_URL}/logout`, config)
-            .then((response) => toast.success(response.data.message))
+            .then((response) => {
+                toast.success(response.data.message);
+                navigate('/');
+            })
             .catch((error) => toast.error(error.response.data.message));
-        window.open(`${process.env.REACT_APP_SERVER_URL}/auth/logout`, '_self');
     };
     return (
         <nav className="fixed z-50 h-16 w-full bg-pink-500 px-2 shadow-md md:px-4">
