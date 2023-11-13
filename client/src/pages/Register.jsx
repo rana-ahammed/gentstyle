@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { MdEmail } from 'react-icons/md';
-import { BsFillFilePersonFill, BsFacebook, BsGithub, BsGoogle } from 'react-icons/bs';
+import { BsFillFilePersonFill } from 'react-icons/bs';
 import { BiShow, BiHide } from 'react-icons/bi';
 import { AiFillLock } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
@@ -23,16 +23,6 @@ function Register() {
     const reCaptchaOnChange = (value) => {
         setRecaptchaValue(value);
         // setRecaptchaVerified(true);
-    };
-
-    const googleLogin = () => {
-        window.open(`${process.env.REACT_APP_SERVER_URL}/auth/google`, '_self');
-    };
-    const fbLogin = () => {
-        window.open(`${process.env.REACT_APP_SERVER_URL}/auth/facebook`, '_self');
-    };
-    const githubLogin = () => {
-        window.open(`${process.env.REACT_APP_SERVER_URL}/auth/github`, '_self');
     };
 
     const {
@@ -163,34 +153,7 @@ function Register() {
                         {isLoading ? 'Processing...' : 'Sign Up'}
                     </button>
                 </form>
-                <div className="relative mt-2 pb-6">
-                    <div className="absolute left-0 top-0 w-full border border-gray-400"></div>
-                    <div className="absolute -top-3 left-0 w-full text-center">
-                        <span className="bg-white px-4 text-xl font-semibold text-gray-600">
-                            Or continue with
-                        </span>
-                    </div>
-                </div>
-                <div className="flex justify-center gap-3 text-white">
-                    <button
-                        className="mb-3 cursor-pointer rounded-lg bg-pink-500 px-6 py-3 hover:bg-pink-600"
-                        onClick={googleLogin}
-                    >
-                        <BsGoogle className="text-3xl" />
-                    </button>
-                    <button
-                        className="mb-3 cursor-pointer rounded-lg bg-blue-500 px-6 py-3 hover:bg-blue-600"
-                        onClick={fbLogin}
-                    >
-                        <BsFacebook className="text-3xl" />
-                    </button>
-                    <button
-                        className="mb-3 cursor-pointer rounded-lg bg-gray-600 px-6 py-3 hover:bg-gray-700"
-                        onClick={githubLogin}
-                    >
-                        <BsGithub className="text-3xl" />
-                    </button>
-                </div>
+
                 <Link
                     to="/login"
                     className="my-3 block text-center font-opensans text-sm font-semibold text-blue-500 hover:underline"

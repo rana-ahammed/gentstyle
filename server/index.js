@@ -6,10 +6,9 @@ import cookieParser from 'cookie-parser';
 import cookieSession from 'cookie-session';
 import connectDatabase from './database/db.js';
 
-connectDatabase();
-
 dotenv.config();
 const app = express();
+connectDatabase();
 app.use(cookieParser());
 const corsConfig = {
     credentials: true,

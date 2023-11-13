@@ -46,7 +46,7 @@ const Cart = () => {
     };
 
     return (
-        <div className="flex w-full flex-col items-center gap-1 bg-violet-300 p-8">
+        <div className="flex w-full flex-col items-center gap-1 p-8">
             {cartProducts[0] ? (
                 cartProducts.map((product) => <CartCard product={product} key={product._id} />)
             ) : (

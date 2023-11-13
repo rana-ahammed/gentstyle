@@ -48,7 +48,7 @@ function App() {
             <Toaster />
             <div>
                 <Navbar />
-                <main className="h-full min-h-[calc(82vh)] bg-purple-300 pt-16">
+                <main className="h-screen min-h-[calc(82vh)] bg-purple-300 pt-16">
                     <Outlet />
                 </main>
                 <Footer />

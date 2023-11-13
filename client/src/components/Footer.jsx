@@ -3,7 +3,7 @@ import { BsSkype, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 
 const Footer = () => {
     return (
-        <div className="h-auto w-full bg-gray-200 p-8 text-center">
+        <div className="h-auto w-full bg-pink-400 p-8 pb-9 text-center">
             <p className="text-xl font-bold">
                 &copy; All Rights Reserved by Rana Ahammed {new Date().getFullYear()}
             </p>
