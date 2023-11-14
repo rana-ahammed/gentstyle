@@ -28,7 +28,7 @@ const Slider = () => {
             >
                 <SwiperSlide>
                     <img
-                        className="aspect-auto h-96 w-full object-fill"
+                        className="aspect-auto w-full object-fill"
                         src={banner1}
                         alt="image slide 1"
                     />
@@ -36,14 +36,14 @@ const Slider = () => {
 
                 <SwiperSlide>
                     <img
-                        className="aspect-auto h-96 w-full object-fill"
+                        className="aspect-auto w-full object-fill"
                         src="https://richmanbd.com/wp-content/uploads/2021/01/960.jpg"
                         alt="image slide 2"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img
-                        className="aspect-auto h-96 w-full object-fill"
+                        className="aspect-auto w-full object-fill"
                         src="https://www.aarong.com/media/wysiwyg/eid-ul-adha-clp-mb-08062023.jpg"
                         alt="image slide 3"
                     />
