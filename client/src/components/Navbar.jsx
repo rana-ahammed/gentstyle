@@ -65,7 +65,10 @@ const Navbar = () => {
                                     Hello, {user.name.split(' ')[0]}
                                 </button>
                             ) : (
-                                <button className="rounded-lg bg-gray-200 p-1 hover:bg-gray-400">
+                                <button
+                                    className="rounded-lg bg-gray-200 p-1 hover:bg-gray-400"
+                                    aria-label="user-button"
+                                >
                                     <HiOutlineUserCircle />
                                 </button>
                             )}
