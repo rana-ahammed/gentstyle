@@ -32,6 +32,63 @@
     "theme_color": "#000000",
     "background_color": "#ffffff",
     "prefer_related_applications": true,
-    "description": "RanaShop is",
-    "screenShots": []
+    "description": "RanaShop is a online Clothing Store. Elevate your wardrobe with RanaShop, where style meets simplicity. Discover curated collections of contemporary fashion, from everyday essentials to statement pieces.",
+    "screenShots": [
+        {
+            "src": "rana-shop-home-desktop.png",
+            "sizes": "3264x1836",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Home Page"
+        },
+        {
+            "src": "rana-shop-cart-desktop.png",
+            "sizes": "3264x1836",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Home Page"
+        },
+        {
+            "src": "rana-shop-login-desktop.png",
+            "sizes": "3264x1836",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Home Page"
+        },
+        {
+            "src": "rana-shop-payment-desktop.png",
+            "sizes": "3264x1836",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Home Page"
+        },
+        {
+            "src": "rana-shop-home-mobile.png",
+            "sizes": "850x1536",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Home Page"
+        },
+        {
+            "src": "rana-shop-cart-mobile.png",
+            "sizes": "850x1536",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Cart Page"
+        },
+        {
+            "src": "rana-shop-login-mobile.png",
+            "sizes": "850x1536",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Login Page"
+        },
+        {
+            "src": "rana-shop-payment-mobile.png",
+            "sizes": "850x1536",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Payment Page"
+        }
+    ]
 }
