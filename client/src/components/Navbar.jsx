@@ -44,7 +44,7 @@ const Navbar = () => {
                     to={'/'}
                     className="box-border rounded-lg border p-2 font-bold hover:border-black"
                 >
-                    Rana&apos;s Shop
+                    RanaShop
                 </Link>
                 <div className="flex items-center gap-4 md:gap-6">
                     <div className="hidden text-base md:flex md:gap-6 md:text-lg">
