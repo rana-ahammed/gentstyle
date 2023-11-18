@@ -33,7 +33,7 @@
     "background_color": "#ffffff",
     "prefer_related_applications": true,
     "description": "RanaShop is a online Clothing Store. Elevate your wardrobe with RanaShop, where style meets simplicity. Discover curated collections of contemporary fashion, from everyday essentials to statement pieces.",
-    "screenShots": [
+    "screenshots": [
         {
             "src": "rana-shop-home-desktop.png",
             "sizes": "3264x1836",
