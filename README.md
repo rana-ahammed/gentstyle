@@ -1,5 +1,5 @@
 ## Features of this website
 
-✅ Fully Responsive ✅ Login and Register ✅ JWT Authentication ✅ Email Verification ✅ Uploading product by Admin ✅ Adding and Deleting products from Cart ✅ User can buy product User can make payment (Stripe)
+1. Fully Responsive, 2. Login and Register, 3. JWT Authentication, 4. Email Verification, 5. Uploading product by Admin, 6. Adding and Deleting Products from Cart, 7. Users can buy products Users can make payments (Stripe)
 
 
