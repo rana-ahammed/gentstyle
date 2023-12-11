@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className="h-auto w-full bg-pink-400 p-8 pb-9 text-center">
             <p className="text-xl font-bold">
-                &copy; All Rights Reserved by Rana Ahammed {new Date().getFullYear()}
+                &copy; All Rights Reserved by GentStyle {new Date().getFullYear()}
             </p>
             <div className="mt-4 flex justify-center gap-6 text-2xl">
                 <a
