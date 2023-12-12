@@ -1,6 +1,6 @@
 {
-    "short_name": "RanaShop",
-    "name": "RanaShop",
+    "short_name": "GentStyle",
+    "name": "GentStyle",
     "icons": [
         {
             "src": "logo192.png",
@@ -32,60 +32,60 @@
     "theme_color": "#000000",
     "background_color": "#ffffff",
     "prefer_related_applications": true,
-    "description": "RanaShop is a online Clothing Store. Elevate your wardrobe with RanaShop.",
+    "description": "GentStyle is a online Clothing Store. Elevate your wardrobe with GentStyle.",
     "screenshots": [
         {
-            "src": "rana-shop-home-desktop.png",
+            "src": "gentstyle-home-desktop.png",
             "sizes": "3264x1836",
             "type": "image/png",
             "form_factor": "wide",
             "label": "Home Page"
         },
         {
-            "src": "rana-shop-cart-desktop.png",
+            "src": "gentstyle-cart-desktop.png",
             "sizes": "3264x1836",
             "type": "image/png",
             "form_factor": "wide",
             "label": "Home Page"
         },
         {
-            "src": "rana-shop-login-desktop.png",
+            "src": "gentstyle-signup-desktop.png",
             "sizes": "3264x1836",
             "type": "image/png",
             "form_factor": "wide",
             "label": "Home Page"
         },
         {
-            "src": "rana-shop-payment-desktop.png",
+            "src": "gentstyle-checkout-desktop.png",
             "sizes": "3264x1836",
             "type": "image/png",
             "form_factor": "wide",
             "label": "Home Page"
         },
         {
-            "src": "rana-shop-home-mobile.png",
-            "sizes": "850x1536",
+            "src": "gentstyle-home-mobile.png",
+            "sizes": "850x1346",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "Home Page"
         },
         {
-            "src": "rana-shop-cart-mobile.png",
-            "sizes": "850x1536",
+            "src": "gentstyle-cart-mobile.png",
+            "sizes": "850x1346",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "Cart Page"
         },
         {
-            "src": "rana-shop-login-mobile.png",
-            "sizes": "850x1536",
+            "src": "gentstyle-signup-mobile.png",
+            "sizes": "850x1346",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "Login Page"
         },
         {
-            "src": "rana-shop-payment-mobile.png",
-            "sizes": "850x1536",
+            "src": "gentstyle-checkout-mobile.png",
+            "sizes": "850x1346",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "Payment Page"
