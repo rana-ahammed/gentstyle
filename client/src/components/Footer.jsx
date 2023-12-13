@@ -9,7 +9,7 @@ const Footer = () => {
             </p>
             <div className="mt-4 flex justify-center gap-6 text-2xl">
                 <a
-                    href="https://linkedin.com/in/rana-ahammed"
+                    href="https://linkedin.com/in/rana-ahammed1"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="linkedin-profile-link"
